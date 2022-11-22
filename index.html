@@ -1,6 +1,6 @@
 <html>
 <head>
-  <script src="https://www.puck-js.com/puck.js"></script>
+  <script src="https://www.espruino.com/js/uart.js"></script>
 </head>
 <body>
 <p>Click 'Add Device' to add a new device. Once added, you can toggle
@@ -12,7 +12,7 @@ to the right-hand side.</p>
 var _counter = 0;
 
 document.getElementById("addDevice").addEventListener('click', event => {
-  Puck.connect(function(connection) {
+  UART.connect(function(connection) {
     if (connection===null) {
       console.log("Connection failed!");
       return;
