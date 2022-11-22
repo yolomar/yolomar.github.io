@@ -33,8 +33,8 @@ document.getElementById("addDevice").addEventListener('click', event => {
     // do not reset device - different code than http://webcache.googleusercontent.com/search?q=cache:uJKLZ-9Pl_AJ:https://www.espruino.com/Puck.js%2BWeb%2BBluetooth&hl=en&gl=us&strip=1&vwsrc=0
     // When the button is pressed, send a command to toggle the LED
     document.getElementById("btn"+conId).addEventListener('click', event => {
-      console.log(conName, "Sending LED.toggle()");
-      connection.write("\x10s\n");
+      console.log(conName, "Sending s\n");
+      connection.write("s\n");
     });
   });
 });
