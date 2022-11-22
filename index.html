@@ -16,9 +16,7 @@ document.getElementById("addDevice").addEventListener('click', event => {
     if (connection===null) {
       console.log("Connection failed!");
       return;
-    } else {
-      connection.write("+++", function() {console.log("Wrote +++");});
-    }
+    } 
 
     // Work out a connection number so we can display it on the screen
     // conId/conName are local variables (like connection) so there will
