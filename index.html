@@ -34,7 +34,7 @@ document.getElementById("addDevice").addEventListener('click', event => {
     // When the button is pressed, send a command to toggle the LED
     document.getElementById("btn"+conId).addEventListener('click', event => {
       console.log(conName, "Sending s\n");
-      connection.write("+++\n");
+      connection.write("+++\r\n");
       connection.write("s\n");
     });
   });
