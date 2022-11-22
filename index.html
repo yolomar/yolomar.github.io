@@ -17,7 +17,7 @@ document.getElementById("addDevice").addEventListener('click', event => {
       console.log("Connection failed!");
       return;
     } else {
-      connection.write("+++\r\n", function() {console.log("Wrote +++");});
+      connection.write("+++", function() {console.log("Wrote +++");});
     }
 
     // Work out a connection number so we can display it on the screen
