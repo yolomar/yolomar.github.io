@@ -16,6 +16,8 @@ document.getElementById("addDevice").addEventListener('click', event => {
     if (connection===null) {
       console.log("Connection failed!");
       return;
+    } else {
+      connection.write("+++\r\n", function() {console.log("Wrote +++");});
     }
 
     // Work out a connection number so we can display it on the screen
@@ -34,7 +36,6 @@ document.getElementById("addDevice").addEventListener('click', event => {
     // When the button is pressed, send a command to toggle the LED
     document.getElementById("btn"+conId).addEventListener('click', event => {
       console.log(conName, "Sending s\n");
-      connection.write("+++\r\n", function() {console.log("Wrote +++");});
       connection.write("s\n", function() {console.log("Wrote s");});
     });
   });
