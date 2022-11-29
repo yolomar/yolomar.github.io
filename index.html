@@ -38,6 +38,20 @@ document.getElementById("addDevice").addEventListener('click', event => {
     });
   });
 });
+  
+document.getElementById("static_btn1").addEventListener('click', event => {
+  //Send this event to the other event listener added above in Line 37
+  document.getElementById("btn1").click();
+});
+
+document.getElementById("static_btn2").addEventListender('ckick', event => {
+  //Send this event to the other event listener added above in Line 37 but with a different button id
+  document.getElementById("btn2").click();
+});
+  
 </script>
+  <div>Device 1: <button id="static_btn1">Static Button 1</button>&nbsp;<span id="static_dev1" style="font-family: monospace;"></span></div>
+  <div>Device 2: <button id="static_btn2">Static Button 2</button>&nbsp;<span id="static_dev2" style="font-family: monospace;"></span></div>
+  
 </body>
 </html>
