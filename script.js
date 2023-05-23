@@ -25,7 +25,7 @@ $('#stop').click(function(){
       console.log(r);
       alert(hours + ":" + mins + ":" + seconds);
       alert(getTemplateRow());
-      r.parentNode.insertAfter(getTemplateRow(), r);
+      r.parentNode.insertBefore(getTemplateRow(), r);
       clearTimeout(timex);
 });
 
