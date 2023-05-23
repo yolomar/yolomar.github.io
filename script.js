@@ -23,13 +23,14 @@ $('#stop').click(function(){
       var rows = t.getElementsByTagName("tr");
       var r = rows[rows.length - 1];
       r.parentNode.insertBefore(getTemplateRow(), r);
-      clearTimeout(timex);
+      //clearTimeout(timex);
 });
 
 $('#reset').click(function(){
       hours =0;      mins =0;      seconds =0;
   $('#hours','#mins').html('00:');
   $('#seconds').html('00');
+      clearTimeout(timex);
 });
 
 function startTimer(){
