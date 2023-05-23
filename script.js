@@ -20,7 +20,7 @@ $('#stop').click(function(){
       console.log(t);
       var rows = t.getElementsByTagName("tr");
       var r = rows[rows.length - 1];
-      alert(hours + ":" + minutes + ":" + seconds);
+      alert(hours + ":" + mins + ":" + seconds);
       r.parentNode.insertAfter(getTemplateRow(), r);
       clearTimeout(timex);
 });
