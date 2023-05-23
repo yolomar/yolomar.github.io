@@ -17,9 +17,11 @@ function getTemplateRow() {
 
 $('#stop').click(function(){
       var t = document.getElementById("timing-table");
+      console.log(t);
       var rows = t.getElementsByTagName("tr");
       var r = rows[rows.length - 1];
-      r.parentNode.insertBefore(getTemplateRow(), r);
+      console.log(r);
+      r.parentNode.insertAfter(getTemplateRow(), r);
       clearTimeout(timex);
 });
 
