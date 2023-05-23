@@ -22,9 +22,7 @@ $('#stop').click(function(){
       console.log(t);
       var rows = t.getElementsByTagName("tr");
       var r = rows[rows.length - 1];
-      console.log(r);
-      alert(hours + ":" + mins + ":" + seconds);
-      alert(getTemplateRow());
+      alert("r" + r);
       r.parentNode.insertBefore(getTemplateRow(), r);
       clearTimeout(timex);
 });
