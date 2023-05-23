@@ -1,12 +1,25 @@
 var hours =0;
 var mins =0;
 var seconds =0;
+var maxID = 0;
 
 $('#start').click(function(){
       startTimer();
 });
 
+function getTemplateRow() {
+      var x = document.getElementById("templateRow").cloneNode(true);
+      x.id = "";
+      x.style.display = "";
+      x.innerHTML = x.innerHTML.replace(/{id}/, ++maxID);
+      return x;
+}
+
 $('#stop').click(function(){
+      var t = document.getElementById("timing-table");
+      var rows = t.getElementsByTagName("tr");
+      var r = rows[rows.length - 1];
+      r.parentNode.insertBefore(getTemplateRow(), r);
       clearTimeout(timex);
 });
 
@@ -38,3 +51,5 @@ function startTimer(){
       startTimer();
   },1000);
 }
+
+
