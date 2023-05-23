@@ -22,7 +22,6 @@ $('#stop').click(function(){
       console.log(t);
       var rows = t.getElementsByTagName("tr");
       var r = rows[rows.length - 1];
-      alert("r" + r);
       r.parentNode.insertBefore(getTemplateRow(), r);
       clearTimeout(timex);
 });
