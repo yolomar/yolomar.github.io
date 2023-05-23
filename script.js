@@ -13,6 +13,7 @@ function getTemplateRow() {
       x.style.display = "";
       x.innerHTML = x.innerHTML.replace(/{id}/, ++maxID);
       x.innerHTML = x.innerHTML.replace(/{time}/, hours + ":" + mins + ":" + seconds);
+      console.log(x);
       return x;
 }
 
